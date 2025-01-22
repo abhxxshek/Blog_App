@@ -14,7 +14,7 @@ const AddBlog = () => {
   const location=useLocation();//it is used to access the props passed with the navigate in the home page
   function capvalue(){
     if(location.state!=null){
-      axiosInstance.put('http://localhost:7000/blog/updateblog/'+location.state.val._id,form).then((res)=>{
+      axiosInstance.put('/api/blog/updateblog/'+location.state.val._id,form).then((res)=>{
         alert(res.data.message);
         navigate('/blogs');
       }).catch((error)=>{
@@ -23,7 +23,7 @@ const AddBlog = () => {
     }
     else{
       console.log(form);
-      axiosInstance.post('http://localhost:7000/blog/addblog',form).then((res)=>{
+      axiosInstance.post('/api/blog/addblog',form).then((res)=>{
           alert(res.data.message);
           navigate('/blogs');
       }).catch((error)=>{

@@ -16,7 +16,7 @@ const Signup = () => {
 const navigate=useNavigate();
   function capvalue(){
     console.log(form);
-    axios.post('http://localhost:7000/user/adduser',form).then((res)=>{
+    axios.post('api/user/adduser',form).then((res)=>{
       alert(res.data.message);
       navigate('/blogs');
     }).catch((error)=>{

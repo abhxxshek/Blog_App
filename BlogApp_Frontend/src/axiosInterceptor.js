@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosInstance=axios.create({
-    baseURL:'http://localhost:7000'    //the base url of our backend 
+    baseURL:'/api'    //the base url of our backend 
 })
 axiosInstance.interceptors.request.use((config)=>{
     const accessToken=sessionStorage.getItem('logintoken');
