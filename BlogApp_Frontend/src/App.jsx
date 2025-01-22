@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Signup from './components/Signup'
 import AddBlog from './components/AddBlog'
 import Navbar from './components/Navbar'
-import Main from './components/Main'
+import Main from './components/main'
 import PrivateRoutes from './components/PrivateRoutes'
 
 const App = () => {
