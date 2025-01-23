@@ -9,7 +9,7 @@ const Home = () => {
    const[cardData,setData]=useState([]);
    const navigate=useNavigate();
    useEffect(()=>{
-      axiosInstance.get('/api/blog').then((res)=>{
+      axiosInstance.get('/blog').then((res)=>{
         setData(res.data);
       }).catch((error)=>{
         console.log(error)
@@ -22,7 +22,7 @@ const Home = () => {
     // const location=useLocation();
     function delete_data(val) {
       console.log('Deleting blog with ID:', val._id); // Log the ID to verify it's correct
-      axiosInstance.delete(`/api/blog/deleteblog/${val._id}`).then((res) => {
+      axiosInstance.delete(`/blog/deleteblog/${val._id}`).then((res) => {
         alert(res.data.message);
         navigate('/blogs');
       }).catch((error) => {
