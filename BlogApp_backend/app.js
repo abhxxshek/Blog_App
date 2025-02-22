@@ -5,8 +5,8 @@ app.use(morgan('dev'));
 const cors=require('cors')
 
 app.use(cors());
-const blogRoutes = require('./routes/blogRoutes');
- app.use('/blog', blogRoutes);
+const blogroutes = require('./routes/blogRoutes');
+ app.use('/blog', blogroutes);
  const userroutes=require('./routes/userRoutes');
  app.use('/user',userroutes);
 
